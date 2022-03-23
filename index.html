@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+    
+        <link rel="stylesheet" href="./assets/style.css" />
+
+</head>
+<body>
+   <div class="container">
+        <div class="weather-cards">
+            <div class="card card-1">
+                <div class="card__cuaca">
+                    <img src="./assets/img/icon-1.png" class="icon">
+                    <div class="card-1__cuaca__info">
+                        <h4 class="city"></h4>
+                        <p>The current weather</p>
+                    </div>
+                </div>
+                <div class="card__temperature">
+                    <h3><span class="temp"></span>°C</h3>
+                    <p class="weather"></p>
+                </div>
+                <div class="card__info">
+                    <div class="info__card info-1">
+                        <p class="pressure">Pressure</p>
+                        <h4 class="h4-pressure"></h4>
+                    </div>
+                    <div class="info__card info-2">
+                        <p class="visibility">Visibility</p>
+                        <h4><span class="h4-visibility"></span> M</h4>
+                    </div>
+                    <div class="info__card info-3">
+                        <p class="humidity">Humidity</p>
+                        <h4><span class="h4-humidity"></span>%</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-2">
+                <div class="card__cuaca">
+                    <img src="./assets/img/wind-2.png" class="icon">
+                    <div class="card-1__cuaca__info">
+                        <h4>Air Quality</h4>
+                        <p>Main Pollution: <span class="polution"></span>PM</p>
+                    </div>
+                </div>
+                <div class="card__temperature">
+                    <h3><span class="wind"></span> meter/sec</h3>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <form>
+                <input type="text" class="search-value" placeholder="Search Place...">
+                <button type="submit" class="submit-button">Search!</button>
+            </form>
+        </div>
+   </div>
+   <script src="./app.js"></script>
+</body>
+</html>

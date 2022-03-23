@@ -1,0 +1,114 @@
+body {
+  background: $background;
+}
+.container {
+  background: $background;
+  //@include flex(flex-start, flex-start, column);
+  min-height: 90vh;
+}
+.weather-cards {
+  @include flex(space-around, center, row);
+  width: 90%;
+  margin: auto;
+  margin-top: 5rem;
+  //background-color: lavender;
+  height: 50vh;
+  .card {
+    //background-color: lightgrey;
+    @include flex(flex-start, flex-start, column);
+    height: 90%;
+    width: 50%;
+    margin: auto 1rem;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    color: white;
+    &__cuaca {
+      @include flex(flex-start, flex-start, row);
+      margin: 0rem 0rem 1.2rem 0rem;
+      img {
+        max-width: 7%;
+        margin-right: 2rem;
+      }
+      &__info {
+        margin: auto 2rem;
+      }
+    }
+    &__temperature {
+      margin: 0rem 0rem 1.2rem 0rem;
+    }
+    &__info {
+      //background-color: pink;
+      width: 70%;
+      margin: auto;
+      color: $dark-brown;
+      @include flex(space-evenly, flex-start, row);
+    }
+    .info__card {
+      background-color: white;
+      min-height: 10vh;
+      padding: 1.8rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+  }
+  .card-1 {
+    flex: 1 1 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), transparent),
+      url("./img/background-2.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .info-1 {
+      background-color: #1a2841;
+      color: white;
+    }
+    .info-2 {
+      background-color: #cbe16a;
+    }
+    .info-3 {
+      background-color: white;
+    }
+  }
+  .card-2 {
+    flex: 1 1 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), transparent),
+      url("./img/background-1.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .info__card {
+      color: rgb(175, 148, 175);
+      width: 100%;
+    }
+  }
+}
+
+.search {
+  width: 60%;
+  margin: 5rem auto;
+  //background-color: lightpink;
+  input {
+    width: 80%;
+    border: none;
+    background-color: white;
+    min-height: 10vh;
+    border-radius: 2rem;
+    padding: 0rem 3rem;
+    box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+    color: $dark-brown;
+  }
+  button {
+    padding: 3.6vh 3rem;
+    margin: 0rem 0.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 2.5rem;
+    background-color: rgb(125, 138, 115);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 6px 9px 0;
+    transition: background 0.5s ease-in-out;
+  }
+  button:hover {
+    background-color: rgb(99, 109, 91);
+  }
+}
